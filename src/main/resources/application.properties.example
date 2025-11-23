@@ -1,0 +1,40 @@
+# Configurações da Aplicação
+spring.application.name=viagens-api
+server.port=8080
+
+# Configurações do Banco de Dados PostgreSQL
+spring.datasource.url=jdbc:postgresql://localhost:5432/viagensdb
+spring.datasource.username=SEU_USUARIO
+spring.datasource.password=SUA_SENHA
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# Configurações do JPA/Hibernate
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
+
+# Configurações de JSON
+spring.jackson.serialization.indent_output=true
+spring.jackson.serialization.write-dates-as-timestamps=false
+
+# Configurações de validação
+spring.mvc.throw-exception-if-no-handler-found=true
+spring.web.resources.add-mappings=false
+
+# Configurações JWT
+jwt.secret=ALTERE_ESTA_CHAVE_SECRETA_PARA_PRODUCAO_MINIMO_256_BITS
+jwt.expiration=86400000
+
+# Configurações CORS (ajustar para produção)
+cors.allowed-origins=http://localhost:3000,http://localhost:8080
+
+# Logging
+logging.level.root=INFO
+logging.level.com.agencia.viagens=DEBUG
+logging.level.org.springframework.web=INFO
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+logging.level.org.springframework.security=DEBUG
+
